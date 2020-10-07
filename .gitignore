@@ -1,0 +1,88 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+
+@Irina-Kovtun
+netology-code
+/
+javaqa-homeworks
+2
+195
+Code
+Pull requests
+8
+Actions
+Wiki
+Security
+Insights
+javaqa-homeworks/.gitignore
+@coursar
+coursar fix(.gitignore): target added
+Latest commit 7766259 on 27 Feb
+ History
+ 1 contributor
+47 lines (41 sloc)  491 Bytes
+
+Thumbs.db*
+.DS_Store*
+HELP.md
+.gradle
+build/
+target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### Package Files ###
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+### Exclusions ###
+!gradle/wrapper/gradle-wrapper.jar
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+© 2020 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
