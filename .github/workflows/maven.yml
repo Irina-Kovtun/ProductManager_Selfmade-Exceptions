@@ -5,7 +5,7 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ master, ProductManager, RichModel ]
+    branches: [ master, productManager, richModel ]
   pull_request:
     branches: [ master ]
 
