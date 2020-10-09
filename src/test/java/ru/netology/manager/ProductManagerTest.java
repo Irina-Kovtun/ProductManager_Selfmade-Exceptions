@@ -76,16 +76,4 @@ class ProductManagerTest {
         assertArrayEquals(expected, actual);
         System.out.println("No such product");
     }
-
-    @Test
-    void shouldSearchByMissingClass() {
-        Tshirt seventh = new Tshirt(7, "White", 30);
-        manager.add(seventh);
-        String text = "White";
-        Product[] expected = new Product[0];
-        Product[] actual = manager.searchBy(text);
-        assertArrayEquals(expected, actual);
-        System.out.println("No such product");
-    }
-
 }
