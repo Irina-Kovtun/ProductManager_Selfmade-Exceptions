@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import ru.netology.domain.Book;
 import ru.netology.domain.Product;
 import ru.netology.domain.Smartphone;
+import ru.netology.exceptions.NotFoundException;
 
 public class ProductRepository {
 
@@ -34,24 +35,39 @@ public class ProductRepository {
         return null;
     }
 
+//    public void removeById(int id) {
+//        int index = 0;
+//        for (Product item : items) {
+//            if (item.getId() == id) {
+//                int length = items.length - 1;
+//                Product[] tmp = new Product[length];
+//                for (Product item2 : items) {
+//                    if (item2.getId() != id) {
+//                        tmp[index] = item2;
+//                        index++;
+//                    }
+//                }
+//                items = tmp;
+//                return;
+//            }
+//        }
+
     public void removeById(int id) {
+        findById(id);
+        if (findById(id) == null) {
+            throw new NotFoundException("Element with id: " + id + " not found");
+        }
+        int length = items.length - 1;
+        Product[] tmp = new Product[length];
         int index = 0;
         for (Product item : items) {
-            if (item.getId() == id) {
-                int length = items.length - 1;
-                Product[] tmp = new Product[length];
-                for (Product item2 : items) {
-                    if (item2.getId() != id) {
-                        tmp[index] = item2;
-                        index++;
-                    }
-                }
-                items = tmp;
-                return;
+            if (item.getId() != id) {
+                tmp[index] = item;
+                index++;
             }
         }
+        items = tmp;
     }
-
-
 }
+
 
